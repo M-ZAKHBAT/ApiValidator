@@ -1,0 +1,18 @@
+- Step 1 - Install Jest and supertest
+npm install --save-dev jest supertest
+
+- Step 2 - Configure Jest
+
+Open the package.json and add the code below to it.
+
+"jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+
+That is the basic configuration that we need to get jest set for testing our API. 
+Any file that you want jest to ignore is placed inside the "coveragePathIgnorePatterns". 
+"coveragePathIgnorePatterns" specifies a regex that matches the directory to be excluded, 
+in our case we want it to ignore node_modules directories.
